@@ -6,6 +6,10 @@
 <title>الدرع الأيوني — خالد محمد الحيدري | أساليب الابتكار</title>
 <meta name="description" content="الدرع الأيوني — نظام يمنع تراكم الكربون داخل أنابيب الأفران عالية الحرارة في الصناعات النفطية والبتروكيماوية. خالد محمد الحيدري، شركة أساليب الابتكار.">
 <meta name="theme-color" content="#05080f">
+<!-- يمنع iOS/أندرويد من تحويل أي رقم في النص إلى رابط اتصال تلقائياً -->
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="date=no">
+<meta name="format-detection" content="address=no">
 <meta property="og:type" content="website">
 <meta property="og:title" content="الدرع الأيوني — IONIC SHIELD">
 <meta property="og:description" content="نظام يمنع تراكم الكربون داخل أنابيب الأفران عالية الحرارة — خالد محمد الحيدري، أساليب الابتكار">
@@ -188,6 +192,18 @@
     overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
     font-variant-numeric:tabular-nums;
   }
+  a.val{
+    text-decoration:none;
+    -webkit-tap-highlight-color:transparent;
+    transition:color .18s;
+  }
+  a.val:hover,a.val:active{color:var(--cyan)}
+  /* تعطيل تنسيق سفاري التلقائي للأرقام المكتشفة داخل النصوص */
+  a[x-apple-data-detectors]{
+    color:inherit !important; text-decoration:none !important;
+    font-size:inherit !important; font-weight:inherit !important;
+    pointer-events:none !important;
+  }
   .copy{
     flex:none; display:grid; place-items:center;
     width:32px; height:32px; border-radius:9px;
@@ -352,7 +368,7 @@
   <section class="facts reveal" style="animation-delay:.36s">
     <div class="fact">
       <span class="lbl">جوال</span>
-      <span class="val" id="v-tel">+966 50 567 8126</span>
+      <a class="val" id="v-tel" href="tel:+966505678126">+966 50 567 8126</a>
       <button class="copy" data-copy="+966505678126" aria-label="نسخ رقم الجوال">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
              stroke-linecap="round" stroke-linejoin="round">
@@ -363,7 +379,7 @@
     </div>
     <div class="fact">
       <span class="lbl">إيميل</span>
-      <span class="val" id="v-mail">khalidalhydary@gmail.com</span>
+      <a class="val" id="v-mail" href="mailto:khalidalhydary@gmail.com">khalidalhydary@gmail.com</a>
       <button class="copy" data-copy="khalidalhydary@gmail.com" aria-label="نسخ البريد الإلكتروني">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
              stroke-linecap="round" stroke-linejoin="round">
